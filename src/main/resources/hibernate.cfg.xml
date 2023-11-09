@@ -1,0 +1,13 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Mention all annotated entity classes -->
+        <mapping class="com.evandorou.oddsports.model.Match"/>
+        <mapping class="com.evandorou.oddsports.model.MatchOdds"/>
+
+    </session-factory>
+</hibernate-configuration>

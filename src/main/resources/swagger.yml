@@ -1,0 +1,41 @@
+openapi: 3.0.0
+info:
+  title: Sample API
+  description: A sample API to illustrate Swagger
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+paths:
+  /api/matches:
+    get:
+      summary: List all matches
+      responses:
+        '200':
+          description: A list of matches.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Match'
+components:
+  schemas:
+    Match:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        matchTitle:
+          type: string
+        matchDate:
+          type: date
+          format: string
+        odds:
+          type: object
+    MatchOdds:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
