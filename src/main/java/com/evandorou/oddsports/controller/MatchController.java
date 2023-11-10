@@ -127,7 +127,10 @@ public class MatchController {
      * @return the response entity
      */
     @Operation(summary = "Update a match",
-            description = "Update the details of an existing match",
+            description = """
+                     Update the details of an existing match \n
+                     To edit the existing odds of this match, provide the odds id (i.e. "id": 3),
+                     if the id of the odds doesn't exist it will automatically create the new odds under this match.""",
             responses = {
                     @ApiResponse(responseCode = "200",
                             description = "Successfully updated the match",
